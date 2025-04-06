@@ -1,4 +1,7 @@
 {
+    "app": {
+        "title": "Sudhanshu's Portfolio"
+    },
     "personalDetails": {
         "name": "Sudhanshu Kakkar"
     }

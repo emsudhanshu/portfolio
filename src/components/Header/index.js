@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material';
+import { Grid2, Stack, useTheme } from '@mui/material';
 import data from "../../configs/data.json"
 
 const drawerWidth = 240;
@@ -33,7 +33,7 @@ function Header(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        {data?.personalDetails?.name}
+        {data?.app?.title}
       </Typography>
       <Divider />
       <List>
@@ -51,57 +51,65 @@ function Header(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" component="nav" sx={{
-            color: 'white',
-            background: theme?.palette?.black?.custom1
+    <Grid2 item>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar position="fixed" component="nav" sx={{
+          color: 'white',
+          background: theme?.palette?.black?.custom1
         }}>
-        <Toolbar >
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+          <Toolbar >
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            {/* <Typography> */}
+            <Grid2 sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}>
+
+              <Stack spacing={1} direction='row' alignItems='center' justifyContent={{ xs: 'flex-end', sm: 'flex-start' }}>
+                <img style={{ height: '35px' }} src={require("../../assets/images/icon.png")} />
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{ display: { xs: 'none', sm: 'block' } }}
+                >
+                  {data?.app?.title}
+                </Typography>
+              </Stack>
+            </Grid2>
+            {/* </Typography>  */}
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              {navItems.map((item) => (
+                <Button key={item} sx={{ color: '#fff' }}>
+                  {item}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <nav>
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
           >
-            <MenuIcon />
-          </IconButton>
-          <img src=""
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
-          >
-            {data?.personalDetails?.name}
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-      <Box component="main" sx={{ p: 3 }}>
+            {drawer}
+          </Drawer>
+        </nav>
+        {/* <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
@@ -137,8 +145,9 @@ function Header(props) {
           Voluptates perspiciatis, in pariatur impedit, nam facilis libero dolorem
           dolores sunt inventore perferendis, aut sapiente modi nesciunt.
         </Typography>
+      </Box> */}
       </Box>
-    </Box>
+    </Grid2>
   );
 }
 
