@@ -51,7 +51,7 @@ const Hero = () => (
       </a>
       <a
         href="#contact"
-        className="inline-block bg-[#39FF14] text-[#1E1E1E] px-6 py-3 rounded-lg btn"
+        className="inline-block bg-[#3C3C3C] text-[#fff] px-6 py-3 rounded-lg btn"
       >
         Get in Touch
       </a>
@@ -211,7 +211,7 @@ const Experience = () => (
 
         <div className="bg-[#2D2D2D] p-6 rounded-lg">
           <h3 className="text-xl font-semibold text-[#D4D4D4]">Full Stack Developer - Senior Software Development Engineer</h3>
-          <p className="text-[#D4D4D4]">FIDELITY INFORMATION SERVICES INDIA PRIVATE LTD (FIS) - Bengaluru, India</p>
+          <p className="text-[#D4D4D4]">Fidelity Information Services India Private Ltd (FIS) - Bengaluru, India</p>
           <p className="text-[#39FF14]">Jun 2024 – Jan 2025</p>
           <p className="text-[#D4D4D4]">
             <br></br>
@@ -230,7 +230,7 @@ const Experience = () => (
 
         <div className="bg-[#2D2D2D] p-6 rounded-lg">
           <h3 className="text-xl font-semibold text-[#D4D4D4]">Full Stack Developer – Software Development Engineer II</h3>
-          <p className="text-[#D4D4D4]">FIDELITY INFORMATION SERVICES INDIA PRIVATE LTD (FIS) - Bengaluru, India</p>
+          <p className="text-[#D4D4D4]">Fidelity Information Services India Private Ltd (FIS) - Bengaluru, India</p>
           <p className="text-[#39FF14]">Aug 2023 – May 2024</p>
           <p className="text-[#D4D4D4]">
             <br></br>
@@ -244,7 +244,7 @@ const Experience = () => (
 
         <div className="bg-[#2D2D2D] p-6 rounded-lg">
           <h3 className="text-xl font-semibold text-[#D4D4D4]">Front End Developer – Software Development Engineer II</h3>
-          <p className="text-[#D4D4D4]">FIDELITY INFORMATION SERVICES INDIA PRIVATE LTD (FIS) - Bengaluru, India</p>
+          <p className="text-[#D4D4D4]">Fidelity Information Services India Private Ltd (FIS) - Bengaluru, India</p>
           <p className="text-[#39FF14]">Nov 2021 – July 2023</p>
           <p className="text-[#D4D4D4]">
             <br></br>
