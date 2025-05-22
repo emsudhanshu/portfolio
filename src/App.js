@@ -8,13 +8,13 @@ import ProjectGrid from './components/ProjectGrid';
 function App() {
   return (
     <Grid container p={5}>
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
         <Grid container direction='row' justifyContent='center'>
           <Header />
           <IntroCard />
           <ProjectGrid />
         </Grid>
-      </ThemeProvider>
+      </ThemeProvider> */}
     </Grid>
   );
 }
