@@ -43,18 +43,18 @@ const Hero = () => (
       <h1 className="text-5xl md:text-7xl font-bold mb-4 code-glow">Sudhanshu</h1>
       <p className="text-xl md:text-2xl mb-6">Aspiring Data Scientist | Full Stack Developer</p>
       <div>
-      <a
-        href="https://emsudhanshu.github.io/resume"
-        className="inline-block bg-[#39FF14] text-[#1E1E1E] mr-6 px-6 py-3 rounded-lg btn"
-      >
-        View Resume
-      </a>
-      <a
-        href="#contact"
-        className="inline-block bg-[#3C3C3C] text-[#fff] px-6 py-3 rounded-lg btn"
-      >
-        Get in Touch
-      </a>
+        <a target="_blank"
+          href="https://emsudhanshu.github.io/resume"
+          className="inline-block bg-[#39FF14] text-[#1E1E1E] mr-6 px-6 py-3 rounded-lg btn"
+        >
+          View Resume
+        </a>
+        <a 
+          href="#contact"
+          className="inline-block bg-[#3C3C3C] text-[#fff] px-6 py-3 rounded-lg btn"
+        >
+          Get in Touch
+        </a>
       </div>
     </div>
   </section>
@@ -103,7 +103,7 @@ const Projects = () => {
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-[#D4D4D4] mb-2">{project.name}</h3>
                 <p className="text-[#D4D4D4] mb-4">{project.description}</p>
-                <a href={project.link} className="text-[#39FF14] hover:text-[#FF6D00]">View Project</a>
+                <a target="_blank" href={project.link} className="text-[#39FF14] hover:text-[#FF6D00]">View Project</a>
               </div>
             </div>
           ))}
@@ -113,12 +113,18 @@ const Projects = () => {
   );
 };
 
-// About Component
+// About Component 
 const About = () => (
   <section id="about" className="py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">About Me</h2>
       <p className="text-[#D4D4D4] text-lg">Full Stack Developer with over five years of experience in building scalable applications in banking and logistics domain. Proficient in developing and optimizing web and mobile applications, ensuring high performance and maintainability. I am currently pursuing a Master’s in Applied Artificial Intelligence at Stevens Institute of Technology to expand my expertise in AI-driven solutions.</p>
+      <blockquote style={{padding: '10px', borderWidth: '0px 0px 0px 10px', marginTop: '30px', marginRight: '10px', borderLeft: `4px solid #39ff14`}}>
+      <p style={{marginLeft: '10px', fontWeight: 600}}>
+      <i>"The question is not whether intelligent machines can have any emotions, but whether machines can be intelligent without any emotions.”</i>
+      </p>
+      <p  style={{marginTop: '10px', marginLeft: '10px'}} className="text-[#39FF14]"> <i>— Marvin Minsky</i></p>
+      </blockquote>
     </div>
   </section>
 );
@@ -190,7 +196,7 @@ const Experience = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">Experience</h2>
       <div className="space-y-8">
-      <div className="bg-[#2D2D2D] p-6 rounded-lg">
+        <div className="bg-[#2D2D2D] p-6 rounded-lg">
           <h3 className="text-xl font-semibold text-[#D4D4D4]">Research Assistant - ML and AI</h3>
           <p className="text-[#D4D4D4]">Stevens Institute of Technology - Hoboken, New Jersey, United States</p>
           <p className="text-[#39FF14]">May 2025 – Present</p>
@@ -386,22 +392,22 @@ const Contact = () => (
         </div>
         <div className="flex items-center">
           <i className="fas fa-envelope text-[#39FF14] mr-2"></i>
-          <a href="mailto:emsudhanshu@gmail.com" className="text-[#D4D4D4] hover:text-[#FF6D00]">emsudhanshu@gmail.com</a>
+          <a target="_blank" href="mailto:emsudhanshu@gmail.com" className="text-[#D4D4D4] hover:text-[#FF6D00]">emsudhanshu@gmail.com</a>
         </div>
         <div className="flex items-center">
           <i className="fab fa-linkedin text-[#39FF14] mr-2"></i>
-          <a href="https://www.linkedin.com/in/sudhanshu-kakkar/" className="text-[#D4D4D4] hover:text-[#FF6D00]">LinkedIn</a>
+          <a target="_blank" href="https://www.linkedin.com/in/sudhanshu-kakkar/" className="text-[#D4D4D4] hover:text-[#FF6D00]">LinkedIn</a>
         </div>
         <div className="flex items-center">
           <i className="fab fa-instagram text-[#39FF14] mr-2"></i>
-          <a href="https://www.instagram.com/sudhanshu.kakkar/" className="text-[#D4D4D4] hover:text-[#FF6D00]">Instagram</a>
+          <a target="_blank" href="https://www.instagram.com/sudhanshu.kakkar/" className="text-[#D4D4D4] hover:text-[#FF6D00]">Instagram</a>
         </div>
         <div className="flex items-center">
           <i className="fab fa-facebook text-[#39FF14] mr-2"></i>
-          <a href="https://www.facebook.com/techanshu/" className="text-[#D4D4D4] hover:text-[#FF6D00]">Facebook</a>
+          <a target="_blank" href="https://www.facebook.com/techanshu/" className="text-[#D4D4D4] hover:text-[#FF6D00]">Facebook</a>
         </div>
       </div>
-      <a
+      <a target="_blank"
         href="mailto:emsudhanshu@gmail.com"
         className="inline-block bg-[#39FF14] text-[#1E1E1E] px-6 py-3 rounded-lg btn"
       >
