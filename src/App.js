@@ -6,7 +6,7 @@ import profilePic from './assets/images/profile.jpg'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="fixed top-0 w-full bg-[#252526] bg-opacity-95 backdrop-blur-md z-10 shadow-md">
+    <nav style={{ boxShadow: `0 0px 100px rgba(57, 255, 20, 0.3)` }}className="fixed top-0 w-full bg-[#252526] bg-opacity-95 backdrop-blur-md z-10 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
