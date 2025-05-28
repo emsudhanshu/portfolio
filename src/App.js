@@ -419,7 +419,7 @@ const Contact = () => (
 
 // Main App Component
 const App = () => (
-  <div className="text-[#D4D4D4]">
+  <div className="text-[#D4D4D4]" style={{position: 'relative'}}>
     <Header />
     <Hero />
     <Projects />
@@ -431,6 +431,7 @@ const App = () => (
     <Languages />
     <Hobbies />
     <Contact />
+    <div style={{height: '50px', width: '100vw', position:'fixed', bottom: '-50px', boxShadow: `0 0px 100px rgba(57, 255, 20, 0.3)`}}></div>
   </div>
 );
 
