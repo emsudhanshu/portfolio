@@ -45,13 +45,20 @@ const Hero = () => (
       <div>
         <a target="_blank"
           href="https://emsudhanshu.github.io/resume"
-          className="inline-block bg-[#39FF14] text-[#1E1E1E] mr-6 px-6 py-3 rounded-lg btn"
+          className="inline-block bg-[#39FF14] text-[#1E1E1E] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
           View Resume
         </a>
         <a 
+          target="_blank"
+          href="https://github.com/emsudhanshu"
+          className="inline-block bg-[#3C3C3C] text-[#fff] mx-3 px-6 py-3 rounded-lg btn mb-4"
+        >
+          View GitHub Profile
+        </a>
+        <a 
           href="#contact"
-          className="inline-block bg-[#3C3C3C] text-[#fff] px-6 py-3 rounded-lg btn"
+          className="inline-block bg-[#3C3C3C] text-[#fff] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
           Get in Touch
         </a>
