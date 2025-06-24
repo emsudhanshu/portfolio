@@ -83,9 +83,9 @@ const Projects = () => {
       thumbnail: "https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
     },
     {
-      name: "Dynamic Attendance & Feedback Manager",
-      description: "The project allows the institutions to record and view attendance and feedback records effectively.",
-      link: "",
+      name: "Dynamic Attendance Manager",
+      description: "The project allows the institutions to record and view attendance and records effectively.",
+      link: "https://emsudhanshu.github.io/AttendanceManagementSystem/",
       thumbnail: "https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
     },
     {
