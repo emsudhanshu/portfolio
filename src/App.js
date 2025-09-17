@@ -106,9 +106,21 @@ const Projects = () => {
                 alt={`${project.name} thumbnail`}
                 className="w-full sm:w-1/3 h-48 object-cover rounded-lg mb-4 sm:mb-0 sm:mr-6"
               /> */}
-              <div className="flex-1">
+              <div className="flex-1 projectContainer">
                 <h3 className="text-xl font-semibold text-[#D4D4D4] mb-2">{project.name}</h3>
-                <p className="text-[#D4D4D4] mb-4">{project.description}</p>
+                <div className="text-[#D4D4D4] mb-4 projectDescription">{project.description}</div>
+
+                {/* Tech Stack Capsules */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies && project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="bg-[#3C3C3C] text-[#39FF14] px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="buttonStack">
                   <a target="_blank" href={project.link}
@@ -335,17 +347,17 @@ const Certifications = () => (
   <section id="certifications" className="py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">Certifications</h2>
-     <div className="space-y-4">
-      {certifications.map((certification, index) => (
-        <div key={index}>
-          <h3 className="text-xl font-semibold text-[#D4D4D4] uppercase">
-            {certification.title}
-          </h3>
-          <p className="text-[#D4D4D4]">{certification.provider}</p>
-          <p className="text-[#39FF14]">{certification.date}</p>
-        </div>
-      ))}
-    </div>
+      <div className="space-y-4">
+        {certifications.map((certification, index) => (
+          <div key={index}>
+            <h3 className="text-xl font-semibold text-[#D4D4D4] uppercase">
+              {certification.title}
+            </h3>
+            <p className="text-[#D4D4D4]">{certification.provider}</p>
+            <p className="text-[#39FF14]">{certification.date}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );

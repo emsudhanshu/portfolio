@@ -37,6 +37,17 @@
   }
 }
 
+.projectContainer {
+  display: flex;
+  flex-direction: column;  /* stack items vertically */
+  height: 100%;           /* ensure it takes full height of parent */
+}
+
+.projectDescription {
+  flex: 1;           /* grows to fill remaining space */
+  min-width: 0; 
+}
+
 .buttonStack {
   display: flex;
   align-items: center;
