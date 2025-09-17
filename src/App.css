@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.buttonStack {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;                 /* space between buttons */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .buttonStack {
+    flex-direction: column;    /* stack buttons vertically */
+    justify-content: center;   /* center them vertically */
+    align-items: center;       /* center them horizontally */
+    gap: 10px;                 /* space between buttons */
+    margin-top: 20px;
+  }
+}
+
+.buttonStack a.flex-grow {
+  text-align: right;
+  flex: 1;           /* grows to fill remaining space */
+  min-width: 0;      /* ensures it can shrink properly */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+ .buttonStack a.flex-grow {
+    text-align: center;
+  }
+}
+
+
+

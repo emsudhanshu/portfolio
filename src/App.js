@@ -1,12 +1,37 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import logo from './assets/images/logo.png'; // Adjust the path based on the file location
 import profilePic from './assets/images/profile.jpg'
+import projects from './data/projects';
+import certifications from './data/certifications';
+
+const openFlowChart = (base64String) => {
+  // Open a new tab
+  const newWindow = window.open();
+
+  newWindow.document.write(`
+        <html>
+          <head>
+            <title>Chart Preview</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+            <style>
+              body {
+                width: 100%;
+                text-align: center;
+              }
+            </style>
+          </head>
+          <body>
+            <img src="${base64String}" alt="Chart">
+          </body>
+        </html>
+    `);
+}
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav style={{ boxShadow: `0 0px 100px rgba(57, 255, 20, 0.3)` }}className="fixed top-0 w-full bg-[#252526] bg-opacity-95 backdrop-blur-md z-10 shadow-md">
+    <nav style={{ boxShadow: `0 0px 100px rgba(57, 255, 20, 0.3)` }} className="fixed top-0 w-full bg-[#252526] bg-opacity-95 backdrop-blur-md z-10 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
@@ -49,14 +74,14 @@ const Hero = () => (
         >
           View Resume
         </a>
-        <a 
+        <a
           target="_blank"
           href="https://github.com/emsudhanshu"
           className="inline-block bg-[#3C3C3C] text-[#fff] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
           View GitHub Profile
         </a>
-        <a 
+        <a
           href="#contact"
           className="inline-block bg-[#3C3C3C] text-[#fff] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
@@ -69,32 +94,6 @@ const Hero = () => (
 
 // Projects Component
 const Projects = () => {
-  const projects = [
-    {
-      name: "Multi-class depression detection",
-      description: "Machine learning-based web application to identify levels of depression based on user-generated text inputs.",
-      link: "https://emsudhanshu.github.io/depressionDetection/",
-      thumbnail: "https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
-    },
-    {
-      name: "Dog and Cat - CNN Image Classification",
-      description: "This project involves creating a CNN to classify dog and cat images using TensorFlow and Keras.",
-      link: "https://emsudhanshu.github.io/CNN-img-classification-dogs_cats/",
-      thumbnail: "https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
-    },
-    {
-      name: "Dynamic Attendance Manager",
-      description: "The project allows the institutions to record and view attendance and records effectively.",
-      link: "https://emsudhanshu.github.io/AttendanceManagementSystem/",
-      thumbnail: "https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
-    },
-    {
-      name: "Ultrasonic Radar",
-      description: "Ultrasonic Radar interfaced with Arduino Uno Board and output visualization using Processing IDE",
-      link: "",
-      thumbnail: "https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80"
-    },
-  ];
   return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,7 +109,22 @@ const Projects = () => {
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-[#D4D4D4] mb-2">{project.name}</h3>
                 <p className="text-[#D4D4D4] mb-4">{project.description}</p>
-                <a target="_blank" href={project.link} className="text-[#39FF14] hover:text-[#FF6D00]">View Project</a>
+
+                <div className="buttonStack">
+                  <a target="_blank" href={project.link}
+                    className="inline-block bg-[#39FF14] text-[#1E1E1E] px-2 py-2 rounded-lg btn">
+                    View Project
+                  </a>
+
+                  {project.flowchart && <a>
+                    <div onClick={() => openFlowChart(project.flowchart)} className="bg-[#3C3C3C] text-[#D4D4D4] text-right px-2 py-2 rounded-lg btn">
+                      View Flow Chart
+                    </div>
+                  </a>}
+                  {project.sourceCode &&
+                    <a target="_blank" href={project.sourceCode} className="text-[#39FF14] hover:text-[#FF6D00] flex-grow">View Source Code</a>
+                  }
+                </div>
               </div>
             </div>
           ))}
@@ -126,11 +140,11 @@ const About = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">About Me</h2>
       <p className="text-[#D4D4D4] text-lg">Full Stack Developer with over five years of experience in building scalable applications in banking and logistics domain. Proficient in developing and optimizing web and mobile applications, ensuring high performance and maintainability. I am currently pursuing a Master’s in Applied Artificial Intelligence at Stevens Institute of Technology to expand my expertise in AI-driven solutions.</p>
-      <blockquote style={{padding: '10px', borderWidth: '0px 0px 0px 10px', marginTop: '30px', marginRight: '10px', borderLeft: `4px solid #39ff14`}}>
-      <p style={{marginLeft: '10px', fontWeight: 600}}>
-      <i>"The question is not whether intelligent machines can have any emotions, but whether machines can be intelligent without any emotions.”</i>
-      </p>
-      <p  style={{marginTop: '10px', marginLeft: '10px'}} className="text-[#39FF14]"> <i>— Marvin Minsky</i></p>
+      <blockquote style={{ padding: '10px', borderWidth: '0px 0px 0px 10px', marginTop: '30px', marginRight: '10px', borderLeft: `4px solid #39ff14` }}>
+        <p style={{ marginLeft: '10px', fontWeight: 600 }}>
+          <i>"The question is not whether intelligent machines can have any emotions, but whether machines can be intelligent without any emotions.”</i>
+        </p>
+        <p style={{ marginTop: '10px', marginLeft: '10px' }} className="text-[#39FF14]"> <i>— Marvin Minsky</i></p>
       </blockquote>
     </div>
   </section>
@@ -321,28 +335,17 @@ const Certifications = () => (
   <section id="certifications" className="py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">Certifications</h2>
-      <div className="space-y-4">
-        <div>
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">JAVASCRIPT MAPS AND SETS</h3>
-          <p className="text-[#D4D4D4]">Linked Learning</p>
-          <p className="text-[#39FF14]">Jun 2022</p>
+     <div className="space-y-4">
+      {certifications.map((certification, index) => (
+        <div key={index}>
+          <h3 className="text-xl font-semibold text-[#D4D4D4] uppercase">
+            {certification.title}
+          </h3>
+          <p className="text-[#D4D4D4]">{certification.provider}</p>
+          <p className="text-[#39FF14]">{certification.date}</p>
         </div>
-        <div>
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">MEAN STACK</h3>
-          <p className="text-[#D4D4D4]">Brain Mentors Pvt. Ltd.</p>
-          <p className="text-[#39FF14]">Mar 2018 - Apr 2018</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">EMBEDDED SYSTEMS USING ARDUINO</h3>
-          <p className="text-[#D4D4D4]">Delhi Technological University</p>
-          <p className="text-[#39FF14]">Jun 2016 - Jul 2016</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">WEB TECHNOLOGIES</h3>
-          <p className="text-[#D4D4D4]">HMR Institute of Technology & Management</p>
-          <p className="text-[#39FF14]">Feb 2016 - Apr 2016</p>
-        </div>
-      </div>
+      ))}
+    </div>
     </div>
   </section>
 );
@@ -426,7 +429,7 @@ const Contact = () => (
 
 // Main App Component
 const App = () => (
-  <div className="text-[#D4D4D4]" style={{position: 'relative'}}>
+  <div className="text-[#D4D4D4]" style={{ position: 'relative' }}>
     <Header />
     <Hero />
     <Projects />
@@ -438,7 +441,7 @@ const App = () => (
     <Languages />
     <Hobbies />
     <Contact />
-    <div style={{height: '50px', width: '100vw', position:'fixed', bottom: '-50px', boxShadow: `0 0px 100px rgba(57, 255, 20, 0.3)`}}></div>
+    <div style={{ height: '50px', width: '100vw', position: 'fixed', bottom: '-50px', boxShadow: `0 0px 100px rgba(57, 255, 20, 0.3)` }}></div>
   </div>
 );
 
