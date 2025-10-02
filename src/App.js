@@ -255,14 +255,15 @@ const Experience = () => (
           <p className="text-[#D4D4D4]">
             <br></br>
             <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
-              <li>Developed a standalone payment gateway web application using React JS.</li>
-              <li>Built a standalone application for 15G/H submission and download using React JS and Java Spring Boot Microservices.</li>
-              <li>Automated the build generation and obfuscation process using Node.js, saving 2 working hours daily.</li>
-              <li>Led project architecture improvements, including code structuring, optimization, security enhancements, and obfuscation.</li>
-              <li>Developed multiple scripts for boilerplate code generation, accelerating development and reducing redundant efforts.</li>
-              <li>Took ownership of product development, leading a team of 5 developers.</li>
+              <li>Developed a standalone payment gateway application using React JS processing <b>400 transactions</b> daily.</li>
+              <li>Developed a standalone application 15G/H submission and download using React JS and Java Spring Boot Microservices.</li>
+              <li>Automated the build generation and obfuscation process using Node.js, saving <b>2 working hours</b> daily.</li>
+              <li>Drove architectural enhancements like code structuring, optimization, and obfuscation that achieved an excellent AppSec security score of <b>94%</b>.</li>
+              <li>Accelerated development workflows by creating boilerplate code generation scripts that saved developers an estimated <b>15 minutes</b> per module.</li>
+              <li>Took ownership of product development, leading a team of <b>5 developers.</b></li>
               <li>Mentored and guided the team in coding best practices, maintainability, and task delegation while monitoring progress.</li>
-              <li>Contributed to code reviews, pair programming, and Agile methodologies to ensure high-quality and consistent code.</li>
+              <li>Enforced code quality and consistency by conducting weekly code reviews and practicing pair programming, reducing the deployment defect rate by <b>20%</b>.</li>
+
             </ul>
           </p>
         </div>
@@ -274,9 +275,9 @@ const Experience = () => (
           <p className="text-[#D4D4D4]">
             <br></br>
             <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
-              <li>Contributed to the development of backend Microservices using Java Spring Boot framework and PostgreSQL database.</li>
-              <li>Recommended innovative front-end solutions like Micro-Frontends and React Toolkit for improved UI development speed and efficiency.</li>
-              <li>End-to-end delivered and maintained various net banking modules like Profile, Accounts, Payee Management, Alerts Management, Fund Transfers etc. by developing required UI and APIs.</li>
+              <li>Contributed to the development of backend Microservices using Java Spring Boot framework and PostgreSQL database, contributing to a system running <b>15+ services</b>.</li>
+              <li>Drove a <b>50% improvement</b> in front end development speed by recommending and implementing MicroFrontends and React Toolkit, allowing parallel, independent deployment of UI features.</li>
+              <li>End to end delivered and maintained 6+ critical net banking modules like Profile, Accounts, Payee Management, Alerts Management, Fund Transfers etc. by developing required UI and APIs.</li>
             </ul>
           </p>
         </div>
@@ -288,11 +289,11 @@ const Experience = () => (
           <p className="text-[#D4D4D4]">
             <br></br>
             <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
-              <li>Developed an Internet Banking Application using React, Redux, and Material UI to create a dynamic user experience.</li>
-              <li>Designed and implemented reusable React components and intuitive interfaces for streamlined development.</li>
-              <li>Collaborated with UX/UI designers, product managers, and back-end developers to deliver high-quality software.</li>
+              <li>Developed complex Internet Banking UI using React, Redux, and Material UI, achieving a <b>50% reduction</b> in page load time compared to traditional Vanilla JS implementations.</li>
+              <li>Designed and implemented 50+ reusable React components, leading to <b>100% faster</b> module assembly and enforcing design consistency across the application.</li>
+              <li>Collaborated with UX/UI designers, product managers, and back end developers to deliver high quality software.</li>
               <li>Utilized Git and GitHub for version control and collaboration with team members.</li>
-              <li>Embraced Agile methodologies like Scrum to ensure high-quality software delivery.</li>
+              <li>Embraced Agile methodologies like Scrum to ensure high quality software delivery.</li>
             </ul>
           </p>
         </div>
@@ -308,7 +309,7 @@ const Experience = () => (
               <li>Worked closely with the product team to plan, design, and implement new features and functionalities.</li>
               <li>Performed testing, debugging, and optimization to ensure the mobile app's optimal performance.</li>
               <li>Deployed and maintained the app on various platforms.</li>
-              <li>Responded to feedback from the testing team by updating the code to address issues and enhance functionality.</li>
+              <li>Resolved over <b>200 defects</b> and functionality issues reported by the QA team, directly improving the logistics app's stability and user experience.</li>
               <li>Conducted weekly demonstrations to showcase the app's progress and gather feedback from stakeholders.</li>
             </ul>
           </p>
