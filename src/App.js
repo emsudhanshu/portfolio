@@ -277,7 +277,7 @@ const Experience = () => (
             <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
               <li>Contributed to the development of backend Microservices using Java Spring Boot framework and PostgreSQL database, contributing to a system running <b>15+ services</b>.</li>
               <li>Drove a <b>50% improvement</b> in front end development speed by recommending and implementing MicroFrontends and React Toolkit, allowing parallel, independent deployment of UI features.</li>
-              <li>End to end delivered and maintained 6+ critical net banking modules like Profile, Accounts, Payee Management, Alerts Management, Fund Transfers etc. by developing required UI and APIs.</li>
+              <li>End to end delivered and maintained <b>6+</b> critical net banking modules like Profile, Accounts, Payee Management, Alerts Management, Fund Transfers etc. by developing required UI and APIs.</li>
             </ul>
           </p>
         </div>
@@ -290,7 +290,7 @@ const Experience = () => (
             <br></br>
             <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
               <li>Developed complex Internet Banking UI using React, Redux, and Material UI, achieving a <b>50% reduction</b> in page load time compared to traditional Vanilla JS implementations.</li>
-              <li>Designed and implemented 50+ reusable React components, leading to <b>100% faster</b> module assembly and enforcing design consistency across the application.</li>
+              <li>Designed and implemented <b>50+</b> reusable React components, leading to <b>100% faster</b> module assembly and enforcing design consistency across the application.</li>
               <li>Collaborated with UX/UI designers, product managers, and back end developers to deliver high quality software.</li>
               <li>Utilized Git and GitHub for version control and collaboration with team members.</li>
               <li>Embraced Agile methodologies like Scrum to ensure high quality software delivery.</li>
