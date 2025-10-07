@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Research Assistant - ML and AI",
+    "company": "Stevens Institute of Technology - Hoboken, New Jersey, United States",
+    "date": "May 2025 – Present",
+    "points": [
+        "Extending my existing multi-class depression detection project with a custom non-pretrained ML model.",
+        "Researching model architectures to classify depression levels from text.",
+        "Evaluating performance to improve prediction reliability."
+    ]
+  },
+    {
+    "title": "AI Engineer and Developer",
+    "company": "OncRef - Remote - India",
+    "date": "June 2025 – July 2025",
+    "points": [
+        "Enhancing OncRef’s existing web application to improve usability, performance, and user experience",
+        "Collaborated on building a feature that leveraged agentic AI (Crew AI) to automate web scraping, convert unstructured data into structured formats, and enrich it through LLM calls for generating actionable insights."]
+  },
+  {
+    "title": "Full Stack Developer - Senior Software Development Engineer",
+    "company": "Fidelity Information Services India Private Ltd (FIS) - Bengaluru, India",
+    "date": "Jun 2024 – Jan 2025",
+    "points": [
+      "Developed a standalone payment gateway application using React JS processing <b>400 transactions</b> daily.",
+      "Developed a standalone application 15G/H submission and download using React JS and Java Spring Boot Microservices.",
+      "Automated the build generation and obfuscation process using Node.js, saving <b>2 working hours</b> daily.",
+      "Drove architectural enhancements like code structuring, optimization, and obfuscation that achieved an excellent AppSec security score of <b>94%</b>.",
+      "Accelerated development workflows by creating boilerplate code generation scripts that saved developers an estimated <b>15 minutes</b> per module.",
+      "Took ownership of product development, leading a team of <b>5 developers</b>.",
+      "Mentored and guided the team in coding best practices, maintainability, and task delegation while monitoring progress.",
+      "Enforced code quality and consistency by conducting weekly code reviews and practicing pair programming, reducing the deployment defect rate by <b>20%</b>."
+    ]
+  },
+  {
+    "title": "Full Stack Developer – Software Development Engineer II",
+    "company": "Fidelity Information Services India Private Ltd (FIS) - Bengaluru, India",
+    "date": "Aug 2023 – May 2024",
+    "points": [
+      "Contributed to the development of backend Microservices using Java Spring Boot framework and PostgreSQL database, contributing to a system running <b>15+ services</b>.",
+      "Drove a <b>50% improvement</b> in front end development speed by recommending and implementing MicroFrontends and React Toolkit, allowing parallel, independent deployment of UI features.",
+      "End to end delivered and maintained <b>6+</b> critical net banking modules like Profile, Accounts, Payee Management, Alerts Management, Fund Transfers etc. by developing required UI and APIs."
+    ]
+  },
+  {
+    "title": "Front End Developer – Software Development Engineer II",
+    "company": "Fidelity Information Services India Private Ltd (FIS) - Bengaluru, India",
+    "date": "Nov 2021 – July 2023",
+    "points": [
+      "Developed complex Internet Banking UI using React, Redux, and Material UI, achieving a <b>50% reduction</b> in page load time compared to traditional Vanilla JS implementations.",
+      "Designed and implemented <b>50+</b> reusable React components, leading to <b>100% faster</b> module assembly and enforcing design consistency across the application.",
+      "Collaborated with UX/UI designers, product managers, and back end developers to deliver high quality software.",
+      "Utilized Git and GitHub for version control and collaboration with team members.",
+      "Embraced Agile methodologies like Scrum to ensure high quality software delivery."
+    ]
+  },
+  {
+    "title": "Front End Developer - System Engineer",
+    "company": "Tata Consultancy Services Limited – Indore, India",
+    "date": "Aug 2019 – Nov 2021",
+    "points": [
+      "Utilized React Native, Redux, and Material UI to develop and maintain a logistics mobile application for multiple platforms.",
+      "Worked closely with the product team to plan, design, and implement new features and functionalities.",
+      "Performed testing, debugging, and optimization to ensure the mobile app's optimal performance.",
+      "Deployed and maintained the app on various platforms.",
+      "Resolved over <b>200 defects</b> and functionality issues reported by the QA team, directly improving the logistics app's stability and user experience.",
+      "Conducted weekly demonstrations to showcase the app's progress and gather feedback from stakeholders."
+    ]
+  }
+]
