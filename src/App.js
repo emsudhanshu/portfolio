@@ -1,10 +1,11 @@
 import './App.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo from './assets/images/logo.png'; // Adjust the path based on the file location
 import profilePic from './assets/images/profile.jpg'
 import projects from './data/projects';
 import certifications from './data/certifications';
 import experiences from './data/experiences';
+import ChatBot from './Components/ChatBot';
 
 const openFlowChart = (base64String) => {
   // Open a new tab
@@ -385,6 +386,7 @@ const App = () => (
     <Languages />
     <Hobbies />
     <Contact />
+    <ChatBot />
     <div style={{ height: '50px', width: '100vw', position: 'fixed', bottom: '-50px', boxShadow: `0 0px 100px rgba(57, 255, 20, 0.3)` }}></div>
   </div>
 );
