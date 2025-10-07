@@ -19,11 +19,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "obfuscate_build": "javascript-obfuscator build/static/js --output build/static/js",
+    "predeploy": "npm run build && npm run obfuscate_build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "cross-env": "^10.1.0",
+    "gh-pages": "^6.3.0",
+    "javascript-obfuscator": "^4.1.1"
   }
 }
