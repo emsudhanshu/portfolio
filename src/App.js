@@ -125,10 +125,10 @@ const Projects = () => {
                 </div>
 
                 <div className="buttonStack">
-                  <a target="_blank" href={project.link}
+                  {project.link && <a target="_blank" href={project.link}
                     className="inline-block bg-[#39FF14] text-[#1E1E1E] px-2 py-2 rounded-lg btn">
                     View Project
-                  </a>
+                  </a>}
 
                   {project.flowchart && <a>
                     <div onClick={() => openFlowChart(project.flowchart)} className="bg-[#3C3C3C] text-[#D4D4D4] text-right px-2 py-2 rounded-lg btn">
