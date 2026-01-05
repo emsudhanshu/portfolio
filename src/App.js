@@ -339,7 +339,7 @@ const Contact = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
         <div className="flex items-center">
           <i className="fas fa-map-marker-alt text-[#39FF14] mr-2"></i>
-          <span className="text-[#D4D4D4]">Hoboken, NJ, United States</span>
+          <span className="text-[#D4D4D4]">New York City, NY, United States</span>
         </div>
         <div className="flex items-center">
           <i className="fas fa-phone-alt text-[#39FF14] mr-2"></i>
