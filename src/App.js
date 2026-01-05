@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import logo from './assets/images/logo.png'; // Adjust the path based on the file location
-import profilePic from './assets/images/profile.jpg'
+import profilePic from './assets/images/profile_pic_casual.jpg'
 import projects from './data/projects';
 import certifications from './data/certifications';
 import experiences from './data/experiences';
