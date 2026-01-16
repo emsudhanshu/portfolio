@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Full Stack AI Engineer",
+    "company": "OncRef - Remote",
+    "date": "Jun 2025 – Jul 2025",
+    "points": [
+      "Built end-to-end full stack AI features using FastAPI and React, owning APIs and UI integration.",
+      "Designed agent-based workflows with CrewAI for webpage extraction → structured JSON generation → validation.",
+      "Added output validation, retry logic, and error handling, reducing approximately <b>80%</b> of manual human effort.",
+      "Integrated RAG with vector search to ensure LLM responses were grounded in real data and less error-prone."
+    ]
+  },
+  {
+    "title": "Senior Full Stack Software Engineer",
+    "company": "Fidelity Information Services (FIS) - Bengaluru, India",
+    "date": "Nov 2021 – Jan 2025",
+    "points": [
+      "Built and maintained large-scale full stack banking applications using React, Redux, Java Spring Boot, and PostgreSQL, developing <b>15+</b> backend microservices.",
+      "Delivered end-to-end net banking features including Profile, Accounts, Payees, Alerts, and Fund Transfers by developing both frontend UI and backend APIs.",
+      "Developed a standalone payment gateway application processing approximately <b>400 transactions</b> daily.",
+      "Improved development speed and performance by introducing Micro-Frontends, Redux Toolkit, reusable React components, and build automation, reducing page load time by <b>50%</b>.",
+      "Automated build generation and obfuscation processes, saving <b>2+ engineering hours</b> daily.",
+      "Took technical ownership and leadership by mentoring a team of <b>5 engineers</b>, conducting code reviews, improving code quality, achieving an AppSec score of <b>94%</b>, and reducing deployment defects by <b>20%</b>."
+    ]
+  },
+  {
+    "title": "Frontend Developer",
+    "company": "Tata Consultancy Services (TCS) - Indore, India",
+    "date": "Aug 2019 – Nov 2021",
+    "points": [
+      "Built and maintained a cross-platform logistics application using React Native and Redux.",
+      "Collaborated with product teams to design and deliver new features and enhancements.",
+      "Resolved <b>200+</b> defects and performance issues, significantly improving application stability and user experience."
+    ]
+  }
+]

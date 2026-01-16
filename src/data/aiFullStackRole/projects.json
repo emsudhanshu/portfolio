@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Web2JSON Agent Studio",
+    "technologies": [
+      "CrewAI",
+      "FastAPI",
+      "React",
+      "LLM Integration",
+      "RAG"
+    ],
+    "description": "Agentic AI system that automates conversion of unstructured webpages into structured JSON. Implemented multi-step agent workflows with validation, retries, and grounding via RAG, significantly reducing manual data extraction effort and errors.",
+    "sourceCode": ""
+  },
+  {
+    "name": "AI Resume Chatbot Twin",
+    "technologies": [
+      "RAG",
+      "LlamaIndex",
+      "Ollama",
+      "Prompt Engineering",
+      "Vector Databases"
+    ],
+    "description": "Built a resume chatbot that allows recruiters to query candidate experience using natural language. Implemented RAG to ensure grounded and accurate responses from structured resume data.",
+    "sourceCode": ""
+  },
+  {
+    "name": "Dynamic Attendance Management System",
+    "technologies": [
+      "React",
+      "Redux-Saga",
+      "Role-Based Access Control"
+    ],
+    "description": "Role-based web application for managing, updating, and tracking attendance for students, teachers, and administrators with secure workflows and scalable UI architecture.",
+    "sourceCode": "https://github.com/emsudhanshu/AttendanceManagementSystem"
+  }
+]

@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { App as App_aiFullStackRole } from './App_aiFullStackRole';
+import { App as App_appliedAiEngineerRole } from './App_appliedAiEngineerRole';
 import reportWebVitals from './reportWebVitals';
+
+const params = new URLSearchParams(window.location.search);
+const role = params.get("r");
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {role=="aai" ? <App_appliedAiEngineerRole /> : < App_aiFullStackRole/>}
   </React.StrictMode>
 );
 

@@ -2,9 +2,10 @@ import './App.css';
 import { useState } from 'react';
 import logo from './assets/images/logo.png'; // Adjust the path based on the file location
 import profilePic from './assets/images/profile_pic_casual.jpg'
-import projects from './data/projects';
-import certifications from './data/certifications';
-import experiences from './data/experiences';
+import bio from './data/appliedAiEngineerRole/bio';
+import projects from './data/appliedAiEngineerRole/projects';
+import certifications from './data/appliedAiEngineerRole/certifications';
+import experiences from './data/appliedAiEngineerRole/experiences';
 import ChatBot from './Components/ChatBot';
 
 const openFlowChart = (base64String) => {
@@ -68,10 +69,10 @@ const Hero = () => (
         className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-[#39FF14] mb-4 object-cover"
       />
       <h1 className="text-5xl md:text-7xl font-bold mb-4 code-glow">Sudhanshu</h1>
-      <p className="text-xl md:text-2xl mb-6">Software Engineer (5+ yrs) • Applied AI & LLM Systems • Python & React</p>
+      <p className="text-xl md:text-2xl mb-6">{bio.main}</p>
       <div>
         <a target="_blank"
-          href="https://emsudhanshu.github.io/resume"
+          href="https://emsudhanshu.github.io/resume?r=aai"
           className="inline-block bg-[#39FF14] text-[#1E1E1E] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
           View Resume
@@ -153,7 +154,7 @@ const About = () => (
   <section id="about" className="py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">About Me</h2>
-      <p className="text-[#D4D4D4] text-lg">Full Stack Developer with over five years of experience building scalable applications in the banking and logistics domains, with a growing focus on applied AI and machine learning systems. Experienced in developing and optimizing end-to-end web and mobile applications while integrating AI/ML models to drive intelligent features and automation. Currently pursuing a Master’s degree in Applied Artificial Intelligence at Stevens Institute of Technology to deepen expertise in machine learning, large language models, and AI-driven solutions.</p>
+      <p className="text-[#D4D4D4] text-lg">{About.main}</p>
       <blockquote style={{ padding: '10px', borderWidth: '0px 0px 0px 10px', marginTop: '30px', marginRight: '10px', borderLeft: `4px solid #39ff14` }}>
         <p style={{ marginLeft: '10px', fontWeight: 600 }}>
           <i>"The question is not whether intelligent machines can have any emotions, but whether machines can be intelligent without any emotions.”</i>
@@ -391,4 +392,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export { App };
