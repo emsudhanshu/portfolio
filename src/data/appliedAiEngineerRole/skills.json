@@ -1,0 +1,78 @@
+{
+  "skillCategories": [
+    {
+      "category": "Machine Learning",
+      "skills": [
+        "Python",
+        "NLP",
+        "Transformers",
+        "CNN",
+        "TensorFlow"
+      ]
+    },
+    {
+      "category": "Frontend",
+      "skills": [
+        "React",
+        "Redux",
+        "Redux-Saga",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Micro-frontends",
+        "Material UI"
+      ]
+    },
+    {
+      "category": "Debugging",
+      "skills": [
+        "Redux Toolkit",
+        "Chrome Debugger"
+      ]
+    },
+    {
+      "category": "Backend",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Node.js",
+        "Express"
+      ]
+    },
+    {
+      "category": "Database",
+      "skills": [
+        "MongoDB",
+        "SQL"
+      ]
+    },
+    {
+      "category": "Build Tools",
+      "skills": [
+        "Maven",
+        "NPM"
+      ]
+    },
+    {
+      "category": "Source Control",
+      "skills": [
+        "Git",
+        "Bitbucket"
+      ]
+    },
+    {
+      "category": "Agile Methodologies",
+      "skills": [
+        "Scrum",
+        "Sprint Planning",
+        "Retrospectives"
+      ]
+    },
+    {
+      "category": "Project Management",
+      "skills": [
+        "Jira"
+      ]
+    }
+  ]
+}

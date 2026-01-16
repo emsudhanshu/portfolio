@@ -1,0 +1,72 @@
+{
+  "skillCategories": [
+    {
+      "category": "Frontend",
+      "skills": [
+        "React",
+        "Redux",
+        "Redux-Saga",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "REST Integration",
+        "Micro-Frontends",
+        "Redux Toolkit"
+      ]
+    },
+    {
+      "category": "Backend & APIs",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Python",
+        "FastAPI",
+        "RESTful Services",
+        "Request/Response Validation"
+      ]
+    },
+    {
+      "category": "Databases & Storage",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Vector Databases",
+        "FAISS"
+      ]
+    },
+    {
+      "category": "AI / LLM Systems",
+      "skills": [
+        "LLM Integration",
+        "RAG",
+        "Agentic AI",
+        "CrewAI",
+        "Prompt Engineering",
+        "Self-Repair Loops"
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "skills": [
+        "AWS",
+        "CI/CD Pipelines",
+        "Environment-Based Deployments"
+      ]
+    },
+    {
+      "category": "Mobile Development",
+      "skills": [
+        "React Native"
+      ]
+    },
+    {
+      "category": "Agile & Collaboration",
+      "skills": [
+        "Code Reviews",
+        "Technical Mentoring",
+        "Module Ownership"
+      ]
+    }
+  ]
+}

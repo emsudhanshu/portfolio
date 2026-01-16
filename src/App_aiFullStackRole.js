@@ -6,6 +6,7 @@ import bio from './data/aiFullStackRole/bio';
 import projects from './data/aiFullStackRole/projects';
 import certifications from './data/aiFullStackRole/certifications';
 import experiences from './data/aiFullStackRole/experiences';
+import skills from './data/aiFullStackRole/skills';
 import ChatBot from './Components/ChatBot';
 
 const openFlowChart = (base64String) => {
@@ -167,44 +168,7 @@ const About = () => (
 
 // Skills Component
 const Skills = () => {
-  const skillCategories = [
-    {
-      category: "Machine Learning",
-      skills: ["Python", "NLP", "Transformer", "CNN", "Tensorflow"]
-    },
-    {
-      category: "Frontend",
-      skills: ["React", "Redux", "Saga", "JavaScript", "HTML", "CSS", "Micro-frontends", "Material UI"]
-    },
-    {
-      category: "Debugging",
-      skills: ["Redux Toolkit", "Chrome Debugger"]
-    },
-    {
-      category: "Backend",
-      skills: ["Java", "Spring Boot", "Node.js", "Express"]
-    },
-    {
-      category: "Database",
-      skills: ["MongoDB", "SQL"]
-    },
-    {
-      category: "Build Tools",
-      skills: ["Maven", "NPM"]
-    },
-    {
-      category: "Source Control",
-      skills: ["Git", "BitBucket"]
-    },
-    {
-      category: "Agile Methodologies",
-      skills: ["Scrum", "Scrum Planning", "Retrospectives"]
-    },
-    {
-      category: "Project Management",
-      skills: ["Jira"]
-    }
-  ];
+  const skillCategories = skills.skillCategories
   return (
     <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
