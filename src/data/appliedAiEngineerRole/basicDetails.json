@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "name": "Sudhanshu",
+    "resumeUrl": "https://emsudhanshu.github.io/resume?r=aai",
+    "githubUrl": "https://github.com/emsudhanshu"
+  },
+  "quote": {
+    "text": "The question is not whether intelligent machines can have any emotions, but whether machines can be intelligent without any emotions.",
+    "author": "Marvin Minsky"
+  },
+  "education": [
+    {
+      "degree": "Master's Degree - Applied Artificial Intelligence",
+      "institution": "Stevens Institute of Technology, Hoboken, New Jersey, United States",
+      "details": [],
+      "date": "2025 - 2026(Expected)"
+    },
+    {
+      "degree": "Bachelor's Degree - Computer Science Engineering",
+      "institution": "HMRITM, Guru Gobind Singh Indraprastha University, Delhi, India",
+      "details": [
+        "CGPA - 8.4"
+      ],
+      "date": "2015 - 2019"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "IELTS Score: 7.5"
+    },
+    {
+      "name": "Hindi",
+      "proficiency": "Proficient"
+    }
+  ],
+  "hobbies": [
+    "Coding and exploring new technologies",
+    "Photography",
+    "Travelling",
+    "Cycling",
+    "Table Tennis"
+  ],
+  "contact": {
+    "intro": "Feel free to reach out to me for opportunities or collaborations!",
+    "items": [
+      {
+        "iconClass": "fas fa-map-marker-alt",
+        "text": "New York City, NY, United States"
+      },
+      {
+        "iconClass": "fas fa-phone-alt",
+        "text": "+1 732 (500) 2147"
+      },
+      {
+        "iconClass": "fas fa-envelope",
+        "text": "emsudhanshu@gmail.com",
+        "href": "mailto:emsudhanshu@gmail.com"
+      },
+      {
+        "iconClass": "fab fa-linkedin",
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/in/sudhanshu-kakkar/"
+      },
+      {
+        "iconClass": "fab fa-instagram",
+        "text": "Instagram",
+        "href": "https://www.instagram.com/sudhanshu.kakkar/"
+      },
+      {
+        "iconClass": "fab fa-facebook",
+        "text": "Facebook",
+        "href": "https://www.facebook.com/techanshu/"
+      }
+    ],
+    "cta": {
+      "label": "Email Me",
+      "href": "mailto:emsudhanshu@gmail.com"
+    }
+  }
+}

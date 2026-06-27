@@ -2,7 +2,9 @@ import './App.css';
 import { useState } from 'react';
 import logo from './assets/images/logo.png'; // Adjust the path based on the file location
 import profilePic from './assets/images/profile_pic_casual.jpg'
+import about from './data/appliedAiEngineerRole/about';
 import bio from './data/appliedAiEngineerRole/bio';
+import basicDetails from './data/appliedAiEngineerRole/basicDetails';
 import projects from './data/appliedAiEngineerRole/projects';
 import certifications from './data/appliedAiEngineerRole/certifications';
 import experiences from './data/appliedAiEngineerRole/experiences';
@@ -32,6 +34,8 @@ const openFlowChart = (base64String) => {
         </html>
     `);
 }
+
+const { hero, quote, education, languages, hobbies, contact } = basicDetails;
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,18 +74,18 @@ const Hero = () => (
         src={profilePic} alt="Sudhanshu's Profile"
         className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-[#39FF14] mb-4 object-cover"
       />
-      <h1 className="text-5xl md:text-7xl font-bold mb-4 code-glow">Sudhanshu</h1>
+      <h1 className="text-5xl md:text-7xl font-bold mb-4 code-glow">{hero.name}</h1>
       <p className="text-xl md:text-2xl mb-6">{bio.main}</p>
       <div>
         <a target="_blank"
-          href="https://emsudhanshu.github.io/resume?r=aai"
+          href={hero.resumeUrl}
           className="inline-block bg-[#39FF14] text-[#1E1E1E] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
           View Resume
         </a>
         <a
           target="_blank"
-          href="https://github.com/emsudhanshu"
+          href={hero.githubUrl}
           className="inline-block bg-[#3C3C3C] text-[#fff] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
           View GitHub Profile
@@ -156,12 +160,12 @@ const About = () => (
   <section id="about" className="py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">About Me</h2>
-      <p className="text-[#D4D4D4] text-lg">{About.main}</p>
+      <p className="text-[#D4D4D4] text-lg">{about.main}</p>
       <blockquote style={{ padding: '10px', borderWidth: '0px 0px 0px 10px', marginTop: '30px', marginRight: '10px', borderLeft: `4px solid #39ff14` }}>
         <p style={{ marginLeft: '10px', fontWeight: 600 }}>
-          <i>"The question is not whether intelligent machines can have any emotions, but whether machines can be intelligent without any emotions.”</i>
+          <i>"{quote.text}"</i>
         </p>
-        <p style={{ marginTop: '10px', marginLeft: '10px' }} className="text-[#39FF14]"> <i>— Marvin Minsky</i></p>
+        <p style={{ marginTop: '10px', marginLeft: '10px' }} className="text-[#39FF14]"> <i>— {quote.author}</i></p>
       </blockquote>
     </div>
   </section>
@@ -223,18 +227,16 @@ const Education = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">Education</h2>
       <div className="space-y-4">
-
-        <div className="bg-[#2D2D2D] p-6 rounded-lg">
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">Master’s Degree - Applied Artificial Intelligence</h3>
-          <p className="text-[#D4D4D4]]">Stevens Institute of Technology, Hoboken, New Jersey, United States</p>
-          <p className="text-[#39FF14]">2025 - 2026(Expected)</p>
-        </div>
-        <div className="bg-[#2D2D2D] p-6 rounded-lg">
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">Bachelor’s Degree - Computer Science Engineering</h3>
-          <p className="text-[#D4D4D4]]">HMRITM, Guru Gobind Singh Indraprastha University, Delhi, India</p>
-          <p className="text-[#D4D4D4]]">CGPA - 8.4</p>
-          <p className="text-[#39FF14]">2015 - 2019</p>
-        </div>
+        {education.map((item, index) => (
+          <div key={index} className="bg-[#2D2D2D] p-6 rounded-lg">
+            <h3 className="text-xl font-semibold text-[#D4D4D4]">{item.degree}</h3>
+            <p className="text-[#D4D4D4]">{item.institution}</p>
+            {item.details.map((detail, detailIndex) => (
+              <p key={detailIndex} className="text-[#D4D4D4]">{detail}</p>
+            ))}
+            <p className="text-[#39FF14]">{item.date}</p>
+          </div>
+        ))}
       </div>
     </div>
 
@@ -267,14 +269,12 @@ const Languages = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">Languages</h2>
       <div className="space-y-4">
-        <div>
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">English</h3>
-          <p className="text-[#39FF14]">IELTS Score: 7.5</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold text-[#D4D4D4]">Hindi</h3>
-          <p className="text-[#39FF14]">Proficient</p>
-        </div>
+        {languages.map((language, index) => (
+          <div key={index}>
+            <h3 className="text-xl font-semibold text-[#D4D4D4]">{language.name}</h3>
+            <p className="text-[#39FF14]">{language.proficiency}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -286,11 +286,9 @@ const Hobbies = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">Hobbies</h2>
       <ul className="list-disc list-inside text-[#D4D4D4] text-lg">
-        <li>Coding and exploring new technologies</li>
-        <li>Photography</li>
-        <li>Travelling</li>
-        <li>Cycling</li>
-        <li>Table Tennis</li>
+        {hobbies.map((hobby, index) => (
+          <li key={index}>{hobby}</li>
+        ))}
       </ul>
     </div>
   </section>
@@ -301,38 +299,24 @@ const Contact = () => (
   <section id="contact" className="py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-[#39FF14] mb-6 code-glow">Contact</h2>
-      <p className="text-[#D4D4D4] mb-6">Feel free to reach out to me for opportunities or collaborations!</p>
+      <p className="text-[#D4D4D4] mb-6">{contact.intro}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-        <div className="flex items-center">
-          <i className="fas fa-map-marker-alt text-[#39FF14] mr-2"></i>
-          <span className="text-[#D4D4D4]">New York City, NY, United States</span>
-        </div>
-        <div className="flex items-center">
-          <i className="fas fa-phone-alt text-[#39FF14] mr-2"></i>
-          <span className="text-[#D4D4D4]">+1 732 (500) 2147</span>
-        </div>
-        <div className="flex items-center">
-          <i className="fas fa-envelope text-[#39FF14] mr-2"></i>
-          <a target="_blank" href="mailto:emsudhanshu@gmail.com" className="text-[#D4D4D4] hover:text-[#FF6D00]">emsudhanshu@gmail.com</a>
-        </div>
-        <div className="flex items-center">
-          <i className="fab fa-linkedin text-[#39FF14] mr-2"></i>
-          <a target="_blank" href="https://www.linkedin.com/in/sudhanshu-kakkar/" className="text-[#D4D4D4] hover:text-[#FF6D00]">LinkedIn</a>
-        </div>
-        <div className="flex items-center">
-          <i className="fab fa-instagram text-[#39FF14] mr-2"></i>
-          <a target="_blank" href="https://www.instagram.com/sudhanshu.kakkar/" className="text-[#D4D4D4] hover:text-[#FF6D00]">Instagram</a>
-        </div>
-        <div className="flex items-center">
-          <i className="fab fa-facebook text-[#39FF14] mr-2"></i>
-          <a target="_blank" href="https://www.facebook.com/techanshu/" className="text-[#D4D4D4] hover:text-[#FF6D00]">Facebook</a>
-        </div>
+        {contact.items.map((item, index) => (
+          <div key={index} className="flex items-center">
+            <i className={`${item.iconClass} text-[#39FF14] mr-2`}></i>
+            {item.href ? (
+              <a target="_blank" href={item.href} className="text-[#D4D4D4] hover:text-[#FF6D00]">{item.text}</a>
+            ) : (
+              <span className="text-[#D4D4D4]">{item.text}</span>
+            )}
+          </div>
+        ))}
       </div>
       <a target="_blank"
-        href="mailto:emsudhanshu@gmail.com"
+        href={contact.cta.href}
         className="inline-block bg-[#39FF14] text-[#1E1E1E] px-6 py-3 rounded-lg btn"
       >
-        Email Me
+        {contact.cta.label}
       </a>
     </div>
   </section>

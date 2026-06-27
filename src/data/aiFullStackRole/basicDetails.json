@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "name": "SUDHANSHU KAKKAR",
+    "resumeUrl": "https://emsudhanshu.github.io/resume",
+    "githubUrl": "https://github.com/emsudhanshu"
+  },
+  "quote": {
+    "text": "The question is not whether intelligent machines can have any emotions, but whether machines can be intelligent without any emotions.",
+    "author": "Marvin Minsky"
+  },
+  "education": [
+    {
+      "degree": "M.S. Applied Artificial Intelligence",
+      "institution": "Stevens Institute of Technology",
+      "details": [
+        "United States",
+        "Expected"
+      ],
+      "date": "2025 - 2026"
+    },
+    {
+      "degree": "B.Tech Computer Science Engineering",
+      "institution": "GGSIPU",
+      "details": [
+        "India",
+        "CGPA: 8.4"
+      ],
+      "date": "2015 - 2019"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "IELTS Score: 7.5"
+    },
+    {
+      "name": "Hindi",
+      "proficiency": "Proficient"
+    }
+  ],
+  "hobbies": [
+    "Coding and exploring new technologies",
+    "Photography",
+    "Travelling",
+    "Cycling",
+    "Table Tennis"
+  ],
+  "contact": {
+    "intro": "Feel free to reach out to me for opportunities or collaborations!",
+    "items": [
+      {
+        "iconClass": "fas fa-phone-alt",
+        "text": "Phone: 732-500-2147",
+        "href": "tel:7325002147"
+      },
+      {
+        "iconClass": "fas fa-envelope",
+        "text": "Email: emsudhanshu@gmail.com",
+        "href": "mailto:emsudhanshu@gmail.com"
+      },
+      {
+        "iconClass": "fab fa-linkedin",
+        "text": "LinkedIn: linkedin.com/in/sudhanshu-kakkar",
+        "href": "https://linkedin.com/in/sudhanshu-kakkar"
+      },
+      {
+        "iconClass": "fas fa-globe",
+        "text": "Portfolio: emsudhanshu.github.io/portfolio",
+        "href": "https://emsudhanshu.github.io/portfolio"
+      },
+      {
+        "iconClass": "fab fa-github",
+        "text": "GitHub: github.com/emsudhanshu",
+        "href": "https://github.com/emsudhanshu"
+      }
+    ],
+    "cta": {
+      "label": "Email Me",
+      "href": "mailto:emsudhanshu@gmail.com"
+    }
+  }
+}

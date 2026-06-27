@@ -1,71 +1,84 @@
 {
   "skillCategories": [
     {
-      "category": "Frontend",
+      "category": "GenAI & LLM Systems",
       "skills": [
-        "React",
-        "Redux",
-        "Redux-Saga",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "REST Integration",
-        "Micro-Frontends",
-        "Redux Toolkit"
+        "LangGraph",
+        "CrewAI",
+        "RAG",
+        "MCP",
+        "OpenAI",
+        "Gemini",
+        "Llama",
+        "FAISS",
+        "Embeddings",
+        "Vector Search",
+        "Pydantic",
+        "Ollama",
+        "LlamaIndex",
+        "Prompt Engineering"
       ]
     },
     {
       "category": "Backend & APIs",
       "skills": [
-        "Java",
-        "Spring Boot",
         "Python",
         "FastAPI",
-        "RESTful Services",
-        "Request/Response Validation"
+        "Flask",
+        "Java",
+        "Spring Boot",
+        "Node.js",
+        "REST APIs",
+        "WebSockets"
       ]
     },
     {
-      "category": "Databases & Storage",
+      "category": "Frontend",
+      "skills": [
+        "React",
+        "Redux",
+        "Redux Saga",
+        "TypeScript",
+        "JavaScript",
+        "Material UI",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "category": "ML & Deep Learning",
+      "skills": [
+        "PyTorch",
+        "TensorFlow",
+        "Scikit Learn",
+        "Hugging Face",
+        "Transformers",
+        "BERT",
+        "MentalBERT",
+        "DenseNet121",
+        "ResNet50"
+      ]
+    },
+    {
+      "category": "Databases, Vector Stores & Cloud",
       "skills": [
         "PostgreSQL",
         "MySQL",
         "MongoDB",
-        "Vector Databases",
-        "FAISS"
+        "FAISS",
+        "AWS"
       ]
     },
     {
-      "category": "AI / LLM Systems",
+      "category": "Developer Tools & AI Assistants",
       "skills": [
-        "LLM Integration",
-        "RAG",
-        "Agentic AI",
-        "CrewAI",
-        "Prompt Engineering",
-        "Self-Repair Loops"
-      ]
-    },
-    {
-      "category": "Cloud & DevOps",
-      "skills": [
-        "AWS",
-        "CI/CD Pipelines",
-        "Environment-Based Deployments"
-      ]
-    },
-    {
-      "category": "Mobile Development",
-      "skills": [
-        "React Native"
-      ]
-    },
-    {
-      "category": "Agile & Collaboration",
-      "skills": [
-        "Code Reviews",
-        "Technical Mentoring",
-        "Module Ownership"
+        "Git",
+        "GitHub",
+        "GitHub Copilot",
+        "OpenAI Codex",
+        "Claude",
+        "Bitbucket",
+        "Jira"
       ]
     }
   ]
