@@ -20,16 +20,18 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
-          script_stop: true
           envs: REACT_APP_GEMINI_API_KEY,REPO_URL
           script: |
             set -euo pipefail
+
+            echo "[1/8] starting deploy"
 
             SUDO=""
             if command -v sudo >/dev/null 2>&1 && [ "$(id -u)" -ne 0 ]; then
               SUDO="sudo"
             fi
 
+            echo "[2/8] preparing repo directory"
             mkdir -p ~/portfolio
             if [ ! -d ~/portfolio/.git ]; then
               rm -rf ~/portfolio
@@ -37,9 +39,11 @@ jobs:
             fi
 
             cd ~/portfolio
+            echo "[3/8] syncing repo"
             git fetch origin master
             git reset --hard origin/master
 
+            echo "[4/8] stopping old containers"
             ${SUDO} docker stop portfolio-app || true
             ${SUDO} docker stop portfolio-container || true
             ${SUDO} docker rm portfolio-app || true
@@ -56,15 +60,20 @@ jobs:
               exit 1
             fi
 
+            echo "[5/8] building docker image"
             ${SUDO} docker build \
               --build-arg REACT_APP_GEMINI_API_KEY="${REACT_APP_GEMINI_API_KEY}" \
               -t portfolio-app .
 
+            echo "[6/8] starting container"
             ${SUDO} docker run -d \
               --name portfolio-app \
               --restart unless-stopped \
               -p 80:80 \
               portfolio-app
 
+            echo "[7/8] pruning old images"
             ${SUDO} docker image prune -f
+
+            echo "[8/8] running containers"
             ${SUDO} docker ps
