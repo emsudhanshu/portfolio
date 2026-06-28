@@ -10,31 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-
-      - name: Copy project files to EC2
-        uses: appleboy/scp-action@v1
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          port: 22
-          target: ~/portfolio
-          overwrite: true
-          source: "Dockerfile,nginx.conf,.dockerignore,package.json,package-lock.json,public,src"
-
       - name: Deploy on EC2
         uses: appleboy/ssh-action@v1.2.5
         env:
           REACT_APP_GEMINI_API_KEY: ${{ secrets.REACT_APP_GEMINI_API_KEY }}
+          REPO_URL: https://github.com/${{ github.repository }}.git
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script_stop: true
-          envs: REACT_APP_GEMINI_API_KEY
+          envs: REACT_APP_GEMINI_API_KEY,REPO_URL
           script: |
             set -euo pipefail
 
@@ -44,7 +31,14 @@ jobs:
             fi
 
             mkdir -p ~/portfolio
+            if [ ! -d ~/portfolio/.git ]; then
+              rm -rf ~/portfolio
+              git clone "${REPO_URL}" ~/portfolio
+            fi
+
             cd ~/portfolio
+            git fetch origin master
+            git reset --hard origin/master
 
             ${SUDO} docker stop portfolio-app || true
             ${SUDO} docker rm portfolio-app || true
