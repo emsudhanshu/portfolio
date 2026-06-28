@@ -19,14 +19,17 @@ jobs:
           script: |
             cd ~/portfolio
 
-            git pull origin master
+            git fetch origin master
+            git reset --hard origin/master
 
             sudo docker stop portfolio-container || true
             sudo docker rm portfolio-container || true
 
-            sudo docker build -t portfolio-app .
+            sudo docker build --no-cache -t portfolio-app .
 
             sudo docker run -d \
               --name portfolio-container \
               -p 80:80 \
               portfolio-app
+
+            sudo docker ps
