@@ -1,0 +1,32 @@
+name: Deploy React Docker App to EC2
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy on EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/portfolio
+
+            git pull origin master
+
+            sudo docker stop portfolio-container || true
+            sudo docker rm portfolio-container || true
+
+            sudo docker build -t portfolio-app .
+
+            sudo docker run -d \
+              --name portfolio-container \
+              -p 80:80 \
+              portfolio-app
