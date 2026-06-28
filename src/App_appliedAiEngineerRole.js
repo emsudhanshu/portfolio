@@ -44,7 +44,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <div class="flex items-center">
-            <img src={logo} style={{ height: '40px', paddingTop: '0px' }} />
+            <img src={logo} alt="Sudhanshu logo" style={{ height: '40px', paddingTop: '0px' }} />
           </div>
           <div onClick={() => { setIsMenuOpen(!isMenuOpen) }} class="flex items-center"><button class="ml-4 md:hidden text-[#D4D4D4]"><i class="fas fa-bars text-2xl"></i></button></div></div><div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`${isMenuOpen ? 'block' : 'hidden'} md:block bg-[#252526] md:bg-transparent`}>
           <div className="flex flex-col md:flex-row md:space-x-4 py-2 md:pt-0">
@@ -78,6 +78,7 @@ const Hero = () => (
       <p className="text-xl md:text-2xl mb-6">{bio.main}</p>
       <div>
         <a target="_blank"
+          rel="noreferrer"
           href={hero.resumeUrl}
           className="inline-block bg-[#39FF14] text-[#1E1E1E] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
@@ -85,6 +86,7 @@ const Hero = () => (
         </a>
         <a
           target="_blank"
+          rel="noreferrer"
           href={hero.githubUrl}
           className="inline-block bg-[#3C3C3C] text-[#fff] mx-3 px-6 py-3 rounded-lg btn mb-4"
         >
@@ -132,18 +134,20 @@ const Projects = () => {
                 </div>
 
                 <div className="buttonStack">
-                  {project.link && <a target="_blank" href={project.link}
+                  {project.link && <a target="_blank" rel="noreferrer" href={project.link}
                     className="inline-block bg-[#39FF14] text-[#1E1E1E] px-2 py-2 rounded-lg btn">
                     View Project
                   </a>}
 
-                  {project.flowchart && <a>
-                    <div onClick={() => openFlowChart(project.flowchart)} className="bg-[#3C3C3C] text-[#D4D4D4] text-right px-2 py-2 rounded-lg btn">
+                  {project.flowchart && <button
+                    type="button"
+                    onClick={() => openFlowChart(project.flowchart)}
+                    className="bg-[#3C3C3C] text-[#D4D4D4] text-right px-2 py-2 rounded-lg btn"
+                  >
                       View Flow Chart
-                    </div>
-                  </a>}
+                  </button>}
                   {project.sourceCode &&
-                    <a target="_blank" href={project.sourceCode} className="text-[#39FF14] hover:text-[#FF6D00] flex-grow">View Source Code</a>
+                    <a target="_blank" rel="noreferrer" href={project.sourceCode} className="text-[#39FF14] hover:text-[#FF6D00] flex-grow">View Source Code</a>
                   }
                 </div>
               </div>
@@ -305,7 +309,7 @@ const Contact = () => (
           <div key={index} className="flex items-center">
             <i className={`${item.iconClass} text-[#39FF14] mr-2`}></i>
             {item.href ? (
-              <a target="_blank" href={item.href} className="text-[#D4D4D4] hover:text-[#FF6D00]">{item.text}</a>
+              <a target="_blank" rel="noreferrer" href={item.href} className="text-[#D4D4D4] hover:text-[#FF6D00]">{item.text}</a>
             ) : (
               <span className="text-[#D4D4D4]">{item.text}</span>
             )}
@@ -313,6 +317,7 @@ const Contact = () => (
         ))}
       </div>
       <a target="_blank"
+        rel="noreferrer"
         href={contact.cta.href}
         className="inline-block bg-[#39FF14] text-[#1E1E1E] px-6 py-3 rounded-lg btn"
       >
